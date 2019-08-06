@@ -1,0 +1,11 @@
+[
+    {
+        "pathname": "/",
+        "name": "Home"
+    },
+    {
+        "pathname": "/setting",
+        "name": "Setting",
+        "model": "setting"
+    }
+]

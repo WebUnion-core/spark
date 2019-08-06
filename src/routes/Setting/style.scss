@@ -1,0 +1,11 @@
+@import "./../../assets/scss/base.scss";
+@import "./../../assets/scss/common.scss";
+
+.setting-container {
+    @extend .container;
+    padding: 40px 20px 0;
+
+    :global(.MuiFormControl-root) {
+        width: 100%;
+    }
+}

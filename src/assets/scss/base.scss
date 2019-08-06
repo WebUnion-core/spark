@@ -1,0 +1,77 @@
+/**
+ * 此文件只存放预设值、函数和mixin
+ */
+
+$color-text-placeholder: #a3a3a3; // placeholder
+$color-link: #108119; // link
+$color-shadow: rgba(0,0,0,0.25); // 阴影色
+$fill-tap: #dddddd; // 默认背景按下
+$fill-overlay-inverse: rgba(0,0,0,0.8); // 浮层背景反色，toast等
+$brand-primary: #650DC7; // 主色
+$brand-primary-heavy: #086560; // 主色深色
+$border-color-thin: #ececec; // 基本边框浅色
+$fill-body: #F6F7F8; // 页面背景
+$color-text-base: #4A4A4A; // 默认文字
+$color-text-base-heavy: #333333; // 默认文字深色
+$color-text-base-thin: #666666; // 默认文字浅色
+$color-text-base-inverse: #FFFFFF; // 默认文字反色
+$color-text-placeholder-inverse: #FFFFFF; // placeholder反色
+$fill-base: #979797; // 组件默认背景
+$fill-base-thin: #F4F4F4; // 组件默认背景浅色
+$fill-base-inverse: #FFFFFF; // 组件默认背景反色
+$border-color-base: #979797; // 基本边框色
+$fill-mask: rgba(0,0,0,0.5); // 遮罩
+
+// 色板
+$yellow1: #FAB525;
+$yellow2: #F9C900;
+$yellow3: #FFAC00;
+$yellow4: #FF8434;
+$gray1: #818181;
+$gray2: #AFAFAF;
+$gray3: #b4b4b4;
+$gray4: #cccccc;
+$gray5: #f1f1f1;
+$gray6: #D2CECD;
+$gray7: #F8F8F8;
+$black1: #222222;
+$black2: #241916;
+$black3: #231815;
+$red1: #FE1400;
+
+/*
+ * 快速转换rem
+ * $px为需要转换的字号
+ */
+@function pxToRem($px){
+	@return $px / 100px * 1rem;
+}
+
+// 线性渐变
+@mixin linear_gradient ($float: to right, $startColor: $green1, $endColor: $green2) {
+	background: linear-gradient($float, $startColor, $endColor);
+}
+
+// input组件placeholder
+@mixin input_placeholder ($color: $color-text-placeholder-inverse) {
+    &::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+        color: $color;
+    }
+    &:-moz-placeholder, textarea:-moz-placeholder {
+        color: $color;
+    }
+    &::-moz-placeholder, textarea::-moz-placeholder {
+        color: $color;
+    }
+    &:-ms-input-placeholder, textarea:-ms-input-placeholder {
+        color: $color;
+    }
+}
+
+// 单行省略
+@mixin single-line-omit ($width) {
+	width: $width; /* 限制宽度 */
+    text-overflow: ellipsis; /* 超出部分省略号表示 */
+    overflow: hidden; /* 超出部分隐藏 */
+    white-space: nowrap;
+}
