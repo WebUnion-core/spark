@@ -1,5 +1,3 @@
-@import "./base.scss";
-
 * {
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
@@ -22,7 +20,6 @@ html {
 body {
     width: 100%;
     height: 100%;
-    font-size: 1rem;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
 }
@@ -64,7 +61,7 @@ fieldset {
     border: 0;
 
     & > legend {
-        padding: 0 .2rem;
+        padding: 0;
         color: #aaa;
     }
 }
@@ -98,37 +95,4 @@ main {
     flex-direction: column;
     width: 100%;
     height: 100%;
-}
-
-:global(#app .MuiTabs-root) {
-    border-bottom: 1px solid #e8e8e8;
-}
-
-:global(#app .MuiTab-root) {
-    text-transform: none;
-}
-
-:global(#app .MuiTab-textColorInherit.Mui-selected) {
-    color: #40a9ff;
-}
-
-:global(#app .MuiTabs-indicator) {
-    background-color: #40a9ff;
-}
-
-:global(#app .MuiFormLabel-root),
-:global(#app .MuiFormLabel-root.Mui-focused),
-:global(#app .MuiRadio-colorSecondary),
-:global(#app .MuiRadio-colorSecondary.Mui-checked) {
-    color: inherit;
-}
-
-:global(#app .day) {
-    background-color: #ffffff;
-    color: #000000;
-}
-
-:global(#app .night) {
-    background-color: #000000;
-    color: #ffffff;
 }

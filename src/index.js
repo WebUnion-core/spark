@@ -1,5 +1,6 @@
 import dva from 'dva';
 import './assets/scss/reset.scss';
+import './assets/scss/mixin.scss';
 
 const routes = require('./routes.json');
 

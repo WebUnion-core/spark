@@ -1,12 +1,12 @@
 @import "./../../assets/scss/base.scss";
-@import "./../../assets/scss/common.scss";
 
 .home-container {
     @extend .container;
     @extend .flex-complete-middle;
+    font-size: pxToRem(16px);
 
     .title {
         text-align: center;
-        font-size: 25px;
+        font-size: pxToRem(25px);
     }
 }

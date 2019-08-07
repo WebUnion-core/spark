@@ -1,9 +1,9 @@
 @import "./../../assets/scss/base.scss";
-@import "./../../assets/scss/common.scss";
 
 .setting-container {
     @extend .container;
-    padding: 40px 20px 0;
+    padding: pxToRem(40px) pxToRem(20px) 0;
+    font-size: pxToRem(16px);
 
     :global(.MuiFormControl-root) {
         width: 100%;

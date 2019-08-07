@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import styles from './style.scss';
 import { Tabs, Tab } from '@material-ui/core';
 
 class NavHeader extends React.Component {
@@ -20,7 +21,7 @@ class NavHeader extends React.Component {
 
         return (
             <Tabs
-                className={ theme }
+                className={ `${styles['nav-header-container']} ${theme}` }
                 value={ tabIndex }
                 onChange={ handleChange }
                 aria-label="ant example"

@@ -2,9 +2,55 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta content="email=no" name="format-detection" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="full-screen" content="yes" />
+
     <title>green-spark</title>
+
+    <script title="公共全局参数">
+    var ua = navigator.userAgent;
+    window.public = {
+        bISPC: !/Android|webOS|iPhone|iPod|BlackBerry/i.test(ua),
+        bIsIOS: !!ua.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
+        bIsUc: ua.toLowerCase().match(/ucweb/i) == "ucweb",
+        bIsAndroid: ua.toLowerCase().match(/android/i) == "android",
+        bIsAndroidVersion: Number(ua.toLowerCase().substr(ua.toLowerCase().indexOf('android') + 8, 3)),
+        bIsQQ: ua.toLowerCase().match(/qq/i) == "qq",
+        bIsWechat: ua.toLowerCase().match(/micromessenger/i) == "micromessenger",
+        bIsWeibo: ua.toLowerCase().match(/weibo/i) == "weibo",
+        bIsHuawei: ua.toLowerCase().match(/huawei/i) == "huawei"
+    };
+    </script>
+
+    <script title="rem初始化">
+    (function(doc, win) {
+        var docEl = doc.documentElement;
+        var resizeEvt = 'onorientationchange' in window ? 'onorientationchange' : 'resize';
+
+        var resizeFn = function() {
+            var deviceWidth = document.documentElement.clientWidth || window.innerWidth;
+            var fontSize;
+
+            if (deviceWidth >= 750) {
+                deviceWidth = 750;
+            } else if (deviceWidth <= 320) {
+                deviceWidth = 320;
+            }
+
+            fontSize = docEl.style.fontSize = (deviceWidth / 7.5) + 'px';
+            win.remSize = parseInt(fontSize, 10);
+        };
+
+        win.addEventListener(resizeEvt, resizeFn, false);
+        doc.addEventListener('DOMContentLoaded', resizeFn, false);
+    })(document, window);
+    </script>
     <link rel="stylesheet" href="index.css" />
 </head>
 

@@ -1,0 +1,42 @@
+:global(#app .MuiTabs-root) {
+    border-bottom: 1px solid #e8e8e8;
+}
+
+:global(#app .MuiTab-root) {
+    text-transform: none;
+}
+
+:global(#app .MuiFormLabel-root),
+:global(#app .MuiTab-root),
+:global(#app .MuiTypography-root),
+:global(#app .MuiButtonBase-root),
+:global(#app .MuiSvgIcon-root),
+:global(#app .MuiFormHelperText-root) {
+    font-size: inherit;
+}
+
+:global(#app .MuiTab-textColorInherit.Mui-selected) {
+    color: #40a9ff;
+}
+
+:global(#app .MuiTabs-indicator) {
+    background-color: #40a9ff;
+    width: auto;
+}
+
+:global(#app .MuiFormLabel-root),
+:global(#app .MuiFormLabel-root.Mui-focused),
+:global(#app .MuiRadio-colorSecondary),
+:global(#app .MuiRadio-colorSecondary.Mui-checked) {
+    color: inherit;
+}
+
+:global(#app .day) {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+:global(#app .night) {
+    background-color: #000000;
+    color: #ffffff;
+}
